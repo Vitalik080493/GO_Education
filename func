@@ -1,0 +1,13 @@
+package main
+
+import (
+    "fmt"
+)
+
+func printHi() {
+    fmt.Println("Hi") // Выводит: Hi
+}
+
+func main() {
+    printHi()
+}

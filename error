@@ -1,0 +1,28 @@
+package main
+ 
+import (
+    "fmt"
+    "errors"
+)
+
+func returnInt() int {
+    return 7
+}
+
+func findError() (int, error) {
+    n := returnInt()
+
+    if (n > 5){
+        return n, errors.New("Number > 5")
+    }
+    return 5, nil
+}
+
+func main() {
+    n, err := findError()
+    if err != nil{
+        fmt.Println(err.Error())
+    }else{
+        fmt.Println(n)
+    }
+}
